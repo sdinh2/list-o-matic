@@ -13,18 +13,18 @@ def list_o_matic():
         phrase = input("Enter the name of an animal: ")
         if phrase in animals:
             animals.remove(phrase)
-            print("1 instance of ",phrase,"removed from list")
+            statement = print("1 instance of",phrase,"removed from list\n")
         elif phrase.lower() == "quit":
-            print("Goodbye!")
+            statement = print("Goodbye!")
             break
         elif phrase == "":
-            print(animals.pop(),"popped from list")
+            statement = print(animals.pop(),"popped from list\n")
             if animals == []:
-                print("There's no more animals in the list. Goodbye!")
+                statement = print("There's no more animals in the list. Goodbye!")
         else:
             animals.append(phrase)
-            print("1 instance of ",phrase,"appended to list")
+            statement = print("1 instance of",phrase,"appended to list\n")
             
-    return list_o_matic
+    return statement
 
 list_o_matic()
